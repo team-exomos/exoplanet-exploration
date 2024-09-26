@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Space Team - Sign In</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 450px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group input[type="number"],
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+
+        .toggle-link {
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+            color: #007bff;
+        }
+
+        .toggle-link:hover {
+            text-decoration: underline;
+        }
+
+        .success-message {
+            color: green;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 id="form-title">Sign In</h2>
+        <form id="space-team-form">
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+
+            <!-- Password -->
+            <div class="form-group" id="password-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+
+            <!-- Additional fields for Joining the Space Team -->
+            <div id="additional-fields" style="display: none;">
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name">
+                </div>
+
+                <!-- Age -->
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Enter your age">
+                </div>
+
+                <!-- Country -->
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" placeholder="Enter your country">
+                </div>
+
+                <!-- College/University -->
+                <div class="form-group">
+                    <label for="college">College/University</label>
+                    <input type="text" id="college" name="college" placeholder="Enter your college or university name">
+                </div>
+
+                <!-- Preferred Role in Space Team -->
+                <div class="form-group">
+                    <label for="role">Preferred Role in Space Team</label>
+                    <select id="role" name="role">
+                        <option value="astronomer">Astronomer</option>
+                        <option value="engineer">Engineer</option>
+                        <option value="scientist">Scientist</option>
+                        <option value="explorer">Explorer</option>
+                        <option value="technician">Technician</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Area of Expertise -->
+                <div class="form-group">
+                    <label for="expertise">Area of Expertise</label>
+                    <input type="text" id="expertise" name="expertise" placeholder="e.g. Physics, Robotics, Astrophysics">
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" class="btn-submit">Submit</button>
+            </div>
+        </form>
+
+        <div id="success-message" class="success-message" style="display: none;"></div>
+
+        <!-- Toggle Between Sign In and Join -->
+        <div class="toggle-link" id="toggle-link">Don't have an account? Join our Space Team!</div>
+    </div>
+
+    <script>
+        // Elements
+        const formTitle = document.getElementById("form-title");
+        const additionalFields = document.getElementById("additional-fields");
+        const toggleLink = document.getElementById("toggle-link");
+        const spaceTeamForm = document.getElementById("space-team-form");
+        const successMessage = document.getElementById("success-message");
+
+        // State for tracking form mode (sign in / join)
+        let isJoining = false;
+
+        // Toggle between Sign In and Join modes
+        toggleLink.addEventListener("click", function() {
+            isJoining = !isJoining;
+            if (isJoining) {
+                formTitle.textContent = "Join Our Space Team";
+                additionalFields.style.display = "block";
+                toggleLink.textContent = "Already a member? Sign In!";
+            } else {
+                formTitle.textContent = "Sign In";
+                additionalFields.style.display = "none";
+                toggleLink.textContent = "Don't have an account? Join our Space Team!";
+            }
+        });
+
+        // Handle form submission
+        spaceTeamForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Get form values
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // If joining, get additional fields
+            if (isJoining) {
+                const fullName = document.getElementById("full-name").value;
+                const age = document.getElementById("age").value;
+                const country = document.getElementById("country").value;
+                const college = document.getElementById("college").value;
+                const role = document.getElementById("role").value;
+                const expertise = document.getElementById("expertise").value;
+
+                // Display success message for joining
+                successMessage.textContent = `Thank you, ${fullName} from ${country}! You have joined our Space Team as a ${role}. We value your expertise in ${expertise}.`;
+            } else {
+                // Display success message for signing in
+                successMessage.textContent = `Welcome back! You've signed in with ${email}.`;
+            }
+
+            successMessage.style.display = "block";
+
+            // Reset the form after submission
+            spaceTeamForm.reset();
+        });
+    </script>
+</body>
+</html>

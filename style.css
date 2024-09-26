@@ -1,0 +1,315 @@
+body {
+    font-family: "Rajdhani", sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    background-color: rgb(0, 0, 19);
+    margin: 0;
+    width: 100%;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hdr-img {
+    height: 100pxpx;
+    width: 100px;
+}
+
+.hdr-img img {
+    height: 100px;
+    width: 100px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 5rem;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header li > a:hover {
+    border-bottom: 5px solid blue;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-btn button {
+    height: 2rem;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: "Rajdhani", sans-serif;
+}
+
+.log-in-btn {
+    background-color: transparent;
+}
+
+.log-in-btn:hover {
+    background-color: white;
+    color: blue;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.sign-in-btn {
+    background-color: blue;
+    border-radius: 5px;
+}
+
+.sign-in-btn:hover {
+    background-color: rgb(2, 2, 185);
+}
+
+#home {
+    margin-top: 108px;
+    background-image: url(./images/header-background.png.jpg);
+}
+
+.hero-sctn {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    gap: 1rem;
+    text-align: justify;
+}
+
+.about {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about h1 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 6rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.about p {
+    height: 100%;
+    padding: 1rem;
+    border: 1px solid blue;
+    border-radius: 5px;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+.hero-img {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img h2, .hero-img h3 {
+    margin: 0;
+}
+
+.hero-img img {
+    width: 50%;
+}
+
+.planets-info {
+    display: flex;
+    gap: 1rem;
+}
+
+.planet-info {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#explore-sctn {
+    margin: 0 20px 1rem 20px;
+    background-color: rgb(0, 0, 19);
+}
+
+#explore-sctn > p {
+    padding: 2rem;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+#explore-sctn > div {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+#explore-sctn > div::-webkit-scrollbar {
+    display: none;
+}
+
+.explore-container {
+    padding: .5rem;
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
+}
+
+.explore-container > a {
+    text-decoration: none;
+    color: white;
+}
+
+.explore {
+    height: 300px;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    transition: .3s;
+}
+
+.explr-img-cntnr {
+    height: 200px;
+    width: 300px;
+}
+
+.explore img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.exploer-info {
+    padding: 0 1rem;
+    height: 78px;
+    border-right: 1px solid blue;
+    border-left: 1px solid blue;
+    border-bottom: 1px solid blue;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+#form {
+    margin: 0 20px 0 20px;
+    background-image: url(./images/header-background.png.jpg);
+    display: flex;
+    gap: 1rem;
+}
+
+.q-and-a,
+.join {
+    flex: 1;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    color: white;
+}
+
+.q-and-a > p, 
+.join > p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.describe-q,
+.join-form {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.q-and-a label,
+.join label {
+    display: block;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#q-topic,
+.join input {
+    height: 2rem;
+    width: 100%;
+    margin-right: 1rem;
+    font-size: 1rem;
+    font-family: "Rajdhani", sans-serif;   
+    border-radius: 5px;
+}
+
+.join input:focus {
+    background-color: transparent;
+    border-color: blue;
+}
+
+#q-topic > option {
+    background-color: white;
+    color: blue;
+}
+
+#q-topic:focus,
+#qustion:focus {
+    outline: none;
+}
+
+#q-topic,
+#qustion,
+.join input {
+    background-color: transparent;
+    color: white;
+    border:1px solid blue;
+}
+
+#qustion {
+    height: 150px;
+    width: 100%;
+    margin-right: 1rem;
+    border-radius: 5px;
+}
+
+.submit-btn,
+.join-btn {
+    width: auto;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: blue;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: rgb(2, 2, 185);
+}
