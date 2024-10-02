@@ -19,13 +19,16 @@
             </a>
         </div>
 
-        <nav>
-            <ul>
+        <div class="menu-btn">
+            <p>Menu</p>
+        </div>
+
+        <nav class="nav-bar" id="nav-bar">
+            <ul id="nav-ul">
                 <li><a href="#explore-sctn">Explore</a></li>
                 <li><a href="#form">QandA</a></li>
-                <li><a href="#">Space News</a></li>
-                <li><a href="#">Board menber</a></li>
-                <li><a href="#">Gallery</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#gallery">Gallery</a></li>
             </ul>
         </nav>
 
@@ -75,69 +78,104 @@
     <section id="explore-sctn">
         <p>Explore the Universe</p>
 
-        <div>
+        <div class="explore-yt-tiy-slide">
+            <div class="yt">
+                <div>
+                    <iframe src="https://www.youtube.com/embed/kFJrlB2vm-8?si=1tdCdTkPlKv7o20j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p>Story Talling</p>
+            </div>
+
+            <div class="diy">
+                <a href="https://drive.google.com/drive/folders/1URa8yhlAm5CEwbLTFMitr4awCdhfZd9b?usp=drive_link" target="_blank">
+                    <p class="diy-project">CLICK HERE</p>
+                </a>
+                <p>DIY Project</p>
+            </div>
+
+            <div class="explore-slide">
+                <div class="slider-container" id="gallery">
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="https://picsum.photos/id/236/300/300" class="slide" alt="Image 1">
+                            <img src="https://picsum.photos/id/237/300/300" class="slide" alt="Image 2">
+                            <img src="https://picsum.photos/id/238/300/300" class="slide" alt="Image 3">
+                            <img src="https://picsum.photos/id/239/300/300" class="slide" alt="Image 4">
+                        </div>
+                    </div>
+            
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>   
+                
+                <p>Cultural Relevence</p>
+            </div>
+        </div>
+
+        <div class="explore-q">
             <div class="explore-container">
-                <a href="">
+                <a href="https://spaceplace.nasa.gov/satellite/en/" target="_blank">
                     <div class="explore">
                         <div class="explr-img-cntnr">
                             <img src="./images/setellite.webp" alt="">
                         </div>
 
                         <div class="exploer-info">
-                            <h2>What is a satellite? How to controll them?</h2>
+                            <h2>What is a Satellite? What are the parts of an artificial satellite?</h2>
                         </div>
                     </div>
                 </a>
 
-                <a href="">
+                <a href="https://spaceplace.nasa.gov/menu/solar-system/" target="_blank">
                     <div class="explore">
                         <div class="explr-img-cntnr">
                             <img src="./images/solor system.jpeg" alt="">
                         </div>
 
                         <div class="exploer-info">
-                            <h2>What is the Power Source of solor system?</h2>
+                            <h2>Want to konw about Solar System?</h2>
                         </div>
                     </div>
                 </a>
 
-                <a href="">
+                <a href="https://spaceplace.nasa.gov/big-bang/en/" target="_blank">
                     <div class="explore">
                         <div class="explr-img-cntnr">
                             <img src="./images/universe.webp" alt="">
                         </div>
 
                         <div class="exploer-info">
-                            <h2>How many universe exiest in our multivese? Does they really exiest?</h2>
+                            <h2>
+                                What's This Big Bang All About?</h2>
                         </div>
                     </div>
                 </a>
 
-                <a href="">
+                <a href=https://science.nasa.gov/universe/stars/" target="_blank">
                     <div class="explore">
                         <div class="explr-img-cntnr">
                             <img src="./images/STARS.webp" alt="">
                         </div>
 
                         <div class="exploer-info">
-                            <h2>Hou many star exiest in the sky? Why we cann't see them in daytime?</h2>
+                            <h2>The Basics of Star. Thir birth, life and death.</h2>
                         </div>
                     </div>
                 </a>
                 
-                <a href="">
+                <a href="https://spaceplace.nasa.gov/all-about-the-moon/en/" target="_blank">
                     <div class="explore">
                         <div class="explr-img-cntnr">
                             <img src="./images/moon.jpeg" alt="">
                         </div>
 
                         <div class="exploer-info">
-                            <h2>Why moon comes at night? What if, it comes at daytime!</h2>
+                            <h2>What makes the Moon glow? Is there actually a “dark side" of the Moon?!</h2>
                         </div>
                     </div>    
                 </a>
                 
-                <a href="">
+                <a href="https://science.nasa.gov/resource/the-milky-way-galaxy/" target="_blank">
                     <div class="explore">
                         <div class="explr-img-cntnr">
                             <img src="./images/galaxy.jpg.jpg" alt="">
@@ -149,14 +187,14 @@
                     </div>
                 </a>
 
-                <a href="">
+                <a href="https://www.nasa.gov/universe/chandra-scouts-nearest-star-system-for-possible-hazards/" target="_blank">
                     <div class="explore">
                         <div class="explr-img-cntnr">
                             <img src="./images/nearest star to sun.jpeg" alt="">
                         </div>
 
                         <div class="exploer-info">
-                            <h2>Which is the nearest star of Sun? How many Planet does it have?</h2>
+                            <h2>Chandra Scouts Nearest Star System for Possible Hazards</h2>
                         </div>
                     </div>
                 </a>
@@ -168,6 +206,10 @@
     <section id="form">
         <div class="q-and-a">
             <p>What are you curious about?</p>
+
+            <div class="curious">
+                <p>Curiosity about space, the universe, and planets fuels scientific discovery and innovation. It expands our understanding of fundamental forces, fosters technological advancements, and inspires solutions to global challenges. Exploring the cosmos encourages critical thinking, broadens our perspective on Earth's place in the universe, and drives future exploration efforts. Curiosity cultivates creativity, innovation, and a sense of wonder, promoting educational growth and interdisciplinary collaboration. Ultimately, it motivates humanity to push boundaries and explore the unknown for the betterment of society.</p>
+            </div>
 
             <div class="describe-q">
                 <label for="q-topic">Question's topic</label>
@@ -224,7 +266,31 @@
         </div>
     </section>
 
+    <section  id="quiz">
+        <a href="https://form.jotform.com/242738484998479?fbclid=IwY2xjawFpiedleHRuA2FlbQIxMAABHcFmqyrEsVc3S9OXebol4oT05ERsexeCMNlo5kGFrZUjHNaUTBX4lxdhSg_aem_6UcJb6NbT9vB76R6SmqbWg" target="_blank">Get a QUIZ</a>
+    </section>
+
+    <!-- Footer -->
     <footer>
+        <div class="footer about-us">
+            <p><b>About us</b></p>
+            <a href="">Our missions</a>
+            <a href="">Our vision</a>
+            <a href="">Board</a>
+        </div>
+        <div class="footer contuc-us">
+            <p><b>Contact us</b></p>
+            <a href="">x@gamail.com</a>
+            <a href="">+88 01234-56780</a>
+        </div>
+        <div class="footer follow-us">
+            <p><b>Follow us</b></p>
+            <a href="">Facebook</a>
+            <a href="">Twitter</a>
+            <a href="">LinkedIn</a>
+        </div>
     </footer>
+
+    <script src="./script.js"></script>
 </body>
 </html>
