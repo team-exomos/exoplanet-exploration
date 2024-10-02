@@ -3,6 +3,7 @@ body {
     background-color: black;
     color: white;
     margin: 0;
+    overflow-x: hidden;
 }
 
 header {
@@ -328,9 +329,28 @@ header {
     -webkit-line-clamp: 2;
 }
 
+#quiz {
+    height: 6rem;
+    margin: 3rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dotted blue;
+    border-radius: 10px;
+    background-image: url(./images/header-background.png.jpg);
+    background-position: center;
+}
+
+#quiz a {
+    text-decoration: none;
+    color: white;
+}
+
 #form {
     margin: 0 20px 0 20px;
-    background-image: url(./images/header-background.png.jpg);
+    background-color: rgb(0, 0, 19);
     display: flex;
     gap: 1rem;
 }
@@ -352,6 +372,14 @@ header {
     font-weight: bold;
 }
 
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .describe-q,
 .join-form {
     width: 100%;
@@ -367,7 +395,8 @@ header {
 }
 
 #q-topic,
-.join input {
+.join input,
+#mail {
     height: 2rem;
     width: 100%;
     margin-right: 1rem;
@@ -376,10 +405,19 @@ header {
     border-radius: 5px;
 }
 
-.join input:focus {
+.join input:focus,
+#mail {
     outline: none;
     background-color: transparent;
     border-color: blue;
+}
+
+.join input:-internal-autofill-selected {
+    background-color: transparent;
+}
+
+#mail {
+    color: white;
 }
 
 #q-topic > option {
@@ -430,20 +468,20 @@ header {
     text-align: justify;
 }
 
-#quiz {
-    margin: 3rem;
-    font-size: 3rem;
-    font-weight: 700;
+.nasa {
+    width: 100%;
+    padding: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px dotted blue;
-    border-radius: 10px;
+    gap: 1.5rem;
+    background-image: url(./images/header-background.png.jpg);
+    background-position: center;
 }
-
-#quiz a {
-    text-decoration: none;
-    color: white;
+.nasa iframe {
+    width: 60%;
+    flex: 1;
 }
 
 footer {
@@ -520,7 +558,6 @@ footer {
 
     .explore-yt-tiy-slide {
         flex-direction: column;
-
         padding: 0 5rem;
     }
 
@@ -531,32 +568,52 @@ footer {
     .explore-slide {
         width: 100%;
     }
+
+    #form {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .describe-q,
+    .join-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .join input {
+        margin: 0;
+        width: 200%;
+    }
+
+    .nasa iframe {
+        width: 75%;
+    }
 }
 
 @media(max-width: 550px) {
-    header {
-        width: auto;
-    }
-
     .nav-btn {
         margin-top: 1rem;
         flex-direction: column;
     }
 
-    #home {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-
     .explore-yt-tiy-slide {
         flex-direction: column;
         width: 100%;
+        padding: 0 .8rem;
     }
 
     .explore-slide {
         width: 100%;
+    }
+
+    .nasa iframe {
+        width: 80%;
+    }
+
+    footer {
+        padding-left: 0;
     }
 }

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/exomos-logo.png.png" type="image/icon type">
 </head>
 <body>
     <!-- Header -->
@@ -158,7 +159,7 @@
                         </div>
 
                         <div class="exploer-info">
-                            <h2>The Basics of Star. Thir birth, life and death.</h2>
+                            <h2>The Basics of Star. Their birth, life and death.</h2>
                         </div>
                     </div>
                 </a>
@@ -202,72 +203,86 @@
         </div>
     </section>
 
+    <section  id="quiz">
+        <a href="https://form.jotform.com/242738484998479?fbclid=IwY2xjawFpiedleHRuA2FlbQIxMAABHcFmqyrEsVc3S9OXebol4oT05ERsexeCMNlo5kGFrZUjHNaUTBX4lxdhSg_aem_6UcJb6NbT9vB76R6SmqbWg" target="_blank">Get a QUIZ</a>
+    </section>
+
     <!-- form -->
     <section id="form">
         <div class="q-and-a">
             <p>What are you curious about?</p>
 
             <div class="curious">
-                <p>Curiosity about space, the universe, and planets fuels scientific discovery and innovation. It expands our understanding of fundamental forces, fosters technological advancements, and inspires solutions to global challenges. Exploring the cosmos encourages critical thinking, broadens our perspective on Earth's place in the universe, and drives future exploration efforts. Curiosity cultivates creativity, innovation, and a sense of wonder, promoting educational growth and interdisciplinary collaboration. Ultimately, it motivates humanity to push boundaries and explore the unknown for the betterment of society.</p>
+                <p>Curiosity about space and planets leads to new discoveries and inventions. It helps us understand the world better and inspires us to explore more for a brighter future.</p>
             </div>
 
-            <div class="describe-q">
-                <label for="q-topic">Question's topic</label>
-                <select name="q-topic" id="q-topic">
-                    <option value="planets">Planets</option>
-                    <option value="stars">Stars</option>
-                    <option value="galaxies">Galaxies</option>
-                    <option value="universes">Universes</option>
-                    <option value="others">Others</option>
-                </select>
-            </div>
-
-            <div class="describe-q">
-                <label for="qustion">Describe your Question</label>
-                <textarea name="qustion" id="qustion" required placeholder="I want to know about....."></textarea>
-            </div>
-
-            <div class="describe-q">
-                <button type="submit" class="submit-btn">Submit Question</button>
-            </div>
+            <form action="https://formspree.io/f/mdknqrzr" method="POST">
+                <div class="describe-q">
+                    <label for="q-topic">Question's topic</label>
+                    <select name="q-topic" id="q-topic">
+                        <option value="planets">Planets</option>
+                        <option value="stars">Stars</option>
+                        <option value="galaxies">Galaxies</option>
+                        <option value="universes">Universes</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+    
+                <div class="describe-q">
+                    <label for="qustion">Describe your Question</label>
+                    <textarea name="qustion" id="qustion" required placeholder="I want to know about....."></textarea>
+                </div>
+    
+                <div class="describe-q">
+                    <label for="mail">Your Email address</label>
+                    <input type="email" id="mail" name="email" required placeholder="yourname@mail.com">
+                </div>
+    
+                <div class="describe-q">
+                    <button type="submit" class="submit-btn">Submit Question</button>
+                </div>
+            </form>
         </div>
 
         <div class="join">
             <p>Join our team</p>
 
-            <div class="join-form">
-                <label for="full-name">Name</label>
-                <input type="text" id="full-name" name="full-name" placeholder="Enter your full name">
-            </div>
-
-            <div class="join-form">
-                <label for="country-name">Country</label>
-                <input type="text" id="country-name" name="country-name" placeholder="Enter your country name">
-            </div>
-
-            <div class="join-form">
-                <label for="university-name">College/University</label>
-                <input type="text" id="university-name" name="university-name" placeholder="X university">
-            </div>
-
-            <div class="join-form">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="X@gmail.com">
-            </div>
-
-            <div class="join-form">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="creat a password">
-            </div>
-
-            <div class="join-form">
-                <button type="submit" class="join-btn">Join</button>
-            </div>
+            <form action="https://formspree.io/f/xldrqyle" method="POST">
+                <div class="join-form">
+                    <label for="full-name">Name</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name">
+                </div>
+    
+                <div class="join-form">
+                    <label for="country-name">Country</label>
+                    <input type="text" id="country-name" name="country-name" placeholder="Enter your country name">
+                </div>
+    
+                <div class="join-form">
+                    <label for="university-name">Institution</label>
+                    <input type="text" id="university-name" name="university-name" placeholder="X university">
+                </div>
+    
+                <div class="join-form">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="X@gmail.com">
+                </div>
+    
+                <div class="join-form">
+                    <label for="password">A Code-Word for sefty</label>
+                    <input type="password" id="password" name="password" placeholder="code-word">
+                </div>
+    
+                <div class="join-form">
+                    <button type="submit" class="join-btn">Join</button>
+                </div>
+            </form>
         </div>
     </section>
 
-    <section  id="quiz">
-        <a href="https://form.jotform.com/242738484998479?fbclid=IwY2xjawFpiedleHRuA2FlbQIxMAABHcFmqyrEsVc3S9OXebol4oT05ERsexeCMNlo5kGFrZUjHNaUTBX4lxdhSg_aem_6UcJb6NbT9vB76R6SmqbWg" target="_blank">Get a QUIZ</a>
+    <section class="nasa">
+        <iframe src="https://eyes.nasa.gov/apps/solar-system/#/home" allowfullscreen></iframe>
+        <iframe src="https://eyes.nasa.gov/staging/apps/solar-system/#/home?rate=3600&time=2024-10-01T20%3A22%3A11.740+00%3A00" allowfullscreen ></iframe>
     </section>
 
     <!-- Footer -->
@@ -280,7 +295,7 @@
         </div>
         <div class="footer contuc-us">
             <p><b>Contact us</b></p>
-            <a href="">x@gamail.com</a>
+            <a href="">teamexomos@gamail.com</a>
             <a href="">+88 01234-56780</a>
         </div>
         <div class="footer follow-us">

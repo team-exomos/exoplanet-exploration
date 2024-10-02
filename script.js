@@ -15,14 +15,12 @@ const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
 
 function showSlide(slideIndex) {
-    // If the index is out of bounds, wrap the slides
     if (slideIndex >= totalSlides) {
         currentSlide = 0;
     } else if (slideIndex < 0) {
         currentSlide = totalSlides - 1;
     }
 
-    // Move the slide container to show the current slide
     const offset = -currentSlide * 100;
     document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
 }
@@ -32,5 +30,4 @@ function changeSlide(step) {
     showSlide(currentSlide);
 }
 
-// Initial call to display the first slide
 showSlide(currentSlide);
