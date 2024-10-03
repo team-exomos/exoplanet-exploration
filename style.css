@@ -660,7 +660,7 @@ footer {
 
     .join input {
         margin: 0;
-        width: 200%;
+        width: 100%;
     }
 
     .ar iframe {
@@ -699,7 +699,7 @@ footer {
     }
 
     .join input {
-        width: 150%;
+        width: 100%;
     }
 
     footer {
