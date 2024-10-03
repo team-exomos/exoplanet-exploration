@@ -697,6 +697,10 @@ footer {
         width: 80%;
     }
 
+    .join input {
+        width: 150%;
+    }
+
     footer {
         padding-left: 0;
     }
