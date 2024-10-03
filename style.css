@@ -329,6 +329,13 @@ header {
     -webkit-line-clamp: 2;
 }
 
+.scroll-indication {
+    text-align: center;
+    font-size: .5rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
 #nasa {
     display: flex;
     margin: 3rem 20px;
