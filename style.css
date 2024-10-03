@@ -694,8 +694,8 @@ footer {
         width: 100%;
     }
 
-    .ar iframe {
-        width: 80%;
+    .ar {
+        display: none;
     }
 
     .join input {
