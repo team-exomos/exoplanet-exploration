@@ -551,6 +551,7 @@ form {
     gap: 1.5rem;
     background-image: url(./images/header-background.png.jpg);
     background-position: center;
+    overflow: hidden;
 }
 .ar iframe {
     width: 80%;
