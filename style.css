@@ -359,6 +359,7 @@ header {
 .nexscl img,
 .nasa-logo img {
   height: 35vh;
+  width: 70%;
 }
 
 .nasa-logo {
