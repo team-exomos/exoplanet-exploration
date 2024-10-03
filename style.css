@@ -344,8 +344,16 @@ header {
 .nexscl {
     flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: end;
+    align-items: center;
+}
+
+.nexscl a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: .5rem;
+    color: white;
 }
 
 .nexscl img,
@@ -356,8 +364,16 @@ header {
 .nasa-logo {
     flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: center;
+}
+
+.nasa-logo a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: .5rem;
+    color: white;
 }
 
 .key-goal {
@@ -536,7 +552,8 @@ form {
     background-position: center;
 }
 .ar iframe {
-    width: 60%;
+    width: 80%;
+    height: 200%;
     flex: 1;
 }
 
