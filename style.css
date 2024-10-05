@@ -519,6 +519,11 @@ form {
     background-position: center;
     overflow: hidden;
 }
+
+.ar h2 {
+    text-align: center;
+}
+
 .ar iframe {
     width: 80%;
     height: 200%;
